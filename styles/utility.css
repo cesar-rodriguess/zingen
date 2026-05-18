@@ -1,0 +1,46 @@
+.py-2xl {
+  padding-block: var(--py-base); /*block eixo vertical "y"*/
+}
+
+.py-lg {
+  padding-block: var(--py-lg); /*eixo vertical "y"*/
+}
+
+.py-xl {
+  padding-block: var(--py-xl); /*eixo vertical "y"*/
+}
+
+.px-xl {
+  padding-inline: var(--px-lg); /*inline eixo horizontal "x"*/
+}
+
+.container { /*tela menor*/
+  --max-width: 375px;
+  width: min(var(--max-width), 100% - var(--px-lg) * 2); /*para dispositivos mobile*/
+  margin-inline: auto;
+  border: solid violet;
+}
+
+.desktop-only{
+  display: none;
+}
+
+.even-columns {
+  display: grid; /*um abaixo do outro*/
+  gap: 1rem;
+}
+
+@media (width >= 80em) { /*tela maior*/
+  .container {
+    --max-width: 80rem;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+
+  .even-columns {
+    grid-auto-flow: column; /*um ao lado do outro*/
+    grid-column: 1fr;
+  }
+}
