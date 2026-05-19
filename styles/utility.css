@@ -1,4 +1,4 @@
-.py-2xl {
+.py-base {
   padding-block: var(--py-base); /*block eixo vertical "y"*/
 }
 
@@ -10,7 +10,7 @@
   padding-block: var(--py-xl); /*eixo vertical "y"*/
 }
 
-.px-xl {
+.px-lg {
   padding-inline: var(--px-lg); /*inline eixo horizontal "x"*/
 }
 
@@ -18,7 +18,7 @@
   --max-width: 375px;
   width: min(var(--max-width), 100% - var(--px-lg) * 2); /*para dispositivos mobile*/
   margin-inline: auto;
-  border: solid violet;
+  /* border: solid violet; */
 }
 
 .desktop-only{
@@ -34,8 +34,16 @@
   display: flex;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .gap-1 {
   gap: 1rem;
+}
+
+.gap-1\.5 {
+  gap: 1.5rem;
 }
 
 .grid {
